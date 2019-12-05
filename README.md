@@ -8,3 +8,5 @@ Metria AB har på uppdrag av Länsstyrelsen i Västra Götaland utvecklat två v
 1. Utbredning av vattenvegetation
 
 2. Identifiering av igenväxande stränder
+
+Verktygen är uppbyggda i Jupyter Notebooks som använder Rymddatalabbets API för att hitta och bearbeta satellitdata.
