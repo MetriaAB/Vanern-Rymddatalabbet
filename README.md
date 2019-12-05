@@ -5,4 +5,6 @@ Verktyg för miljöövervakning kring Vänern med Rymddatalabbet
 
 Metria AB har på uppdrag av Länsstyrelsen i Västra Götaland utvecklat två verktyg för att <br>övervaka miljövariabler kring sjön Vänern:
 
-1. 
+1. Utbredning av vattenvegetation
+
+2. Identifiering av igenväxande stränder
