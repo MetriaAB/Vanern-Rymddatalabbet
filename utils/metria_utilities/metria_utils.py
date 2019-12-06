@@ -77,8 +77,8 @@ def jamforelse(tidsserie, vattenveg, vm_lm, vm_ndwi, ndvi_threshold, ndwi_thresh
     
     maximum = tidsserie.max(dim='time').values
     maximum[vm_lm == 0] = 0
-    maximum[vm_ndwi > ndwi_threshold] = 0
-    maximum[maximum < ndvi_threshold] = 0
+    maximum[vm_ndwi >= ndwi_threshold] = 0
+    maximum[maximum <= ndvi_threshold] = 0
     maximum[maximum > 0] = 1
     
     vveg = vattenveg.astype('float')
