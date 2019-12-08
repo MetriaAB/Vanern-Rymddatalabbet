@@ -73,9 +73,20 @@ def omvandla(original_system, nytt_system, x, y):
 
     return ny_ref
 
-def jamforelse(tidsserie, vattenveg, vm_lm, vm_ndwi, ndvi_threshold, ndwi_threshold):
+def index_max(maximum, vm_lm, vm_ndwi, ndvi_threshold, ndwi_threshold):
     
-    maximum = tidsserie.max(dim='time').values
+    maximum[vm_lm == 0] = 0
+    maximum[vm_ndwi >= ndwi_threshold] = 0
+    maximum[maximum <= ndvi_threshold] = 0
+    maximum[maximum > 0] = 1
+    resultat = numpy.copy(maximum)
+    maximum[maximum == 0] = numpy.nan
+    
+    return maximum, resultat
+
+def jamforelse(ts, vattenveg, vm_lm, vm_ndwi, ndvi_threshold, ndwi_threshold):
+    
+    maximum = ts.max(dim='time').values
     maximum[vm_lm == 0] = 0
     maximum[vm_ndwi >= ndwi_threshold] = 0
     maximum[maximum <= ndvi_threshold] = 0
@@ -98,3 +109,4 @@ def jamforelse(tidsserie, vattenveg, vm_lm, vm_ndwi, ndvi_threshold, ndwi_thresh
     resultat = resultat*mask
     
     return resultat
+
