@@ -11,6 +11,6 @@ Metria AB har på uppdrag av Länsstyrelsen i Västra Götaland utvecklat två v
 Verktygen är uppbyggda i Jupyter Notebooks som använder Rymddatalabbet för att <br>hitta och bearbeta satellitdata.
 
 För att klona alla data till ett användarkonto i Rymddatalabbet, 
-logga in på kontot, öppna en kommandotolk (terminal) och skriv:
+logga in på kontot, <br>öppna en kommandotolk (terminal) och skriv:
 
     git clone https://github.com/MetriaAB/Vanern-Rymddatalabbet.git
